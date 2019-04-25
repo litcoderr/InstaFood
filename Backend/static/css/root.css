@@ -1,0 +1,21 @@
+.jumbotron {
+    background-color: #e91e63;
+    color: #ffffff;
+}
+
+.page-footer {
+    background-image: linear-gradient(to bottom, white, #bdbdbd);
+}
+
+.footer-copyright {
+    font-size: 0.7rem;
+}
+
+.iconic {
+    font-family: 'Leckerli One', cursive;
+}
+
+.iconic a {
+    color: white;
+    text-decoration: none;
+}

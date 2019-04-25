@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>InstaFood</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
+    <link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='css/root.css') }}">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    {% block custom_js %}{% endblock %}
+</head>
+<body>
+    <!-- Heading Search Interface -->
+    <div class="jumbotron jumbotron-fluid text-center" id="search_header">
+        <h1 class="iconic mb-4"><a href="http://127.0.0.1:5000/">InstaFood</a></h2>
+        <div class="container mx-50">
+            <form action="http://127.0.0.1:5000/show/" method="GET">
+                <div class="input-group">
+                    <input class="form-control form-control-lg" type="text" name = "query" size="100" placeholder="Search Location" autocomplete="off">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-success btn-block mt-2" size="50">Around Me</button>
+        </div>
+    </div>
+    <!-- Heading Search Interface -->
+
+    <!-- Content -->
+    {% block content %}{% endblock %}
+    <!-- Content -->
+
+    <!-- Footer for donations -->
+    <footer class="page-footer font-small unique-color-dark pt-4 fixed-bottom" id="copyright_footer">
+        <div class="container-fluid">
+            
+        </div>
+        <div class="footer-copyright text-center py-2">© 2019 Copyright:
+            <a href="" class="text-primary"> instafood.com</a>
+        </div>
+    </footer>
+    <!-- Footer for donations -->
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "root.html" %}
+
+{% block custom_js %}
+    <script type="text/javascript">
+        var request_id = "{{ request_id }}"
+    </script>
+    <script src="{{ url_for('static', filename='js/result.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid text-center" id="results">
+    <p>Loading for the moment..</p>
+</div>
+{% endblock %}
