@@ -18,19 +18,19 @@ I used
 <br><br>
 ### Phones
 <div align="center">
-  <img src="/img/phone.png">
+  <img src="/img/phone.png" height="200">
 </div>
 <br>
 
 ### Pads
 <div align="center">
-  <img src="/img/pad.png">
+  <img src="/img/pad.png" height="200">
 </div>
 <br>
 
 ### PCs and MACs
 <div align="center">
-  <img src="/img/mac.png">
+  <img src="/img/mac.png" height="200">
 </div>
 <br>
 
