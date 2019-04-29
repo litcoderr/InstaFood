@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from instagram_api import api
+import html_response
 import time
 
 app = Flask(__name__)
@@ -27,9 +28,9 @@ def generate_response(request_id):
     print(request_id)
     if request_id in api.task:
         if not api.task[request_id]["is_running"]: # check for request id, if done
-            response.append({"valid" : True})
-            # iterate through responses
-            # TODO Generate response api
+            # TODO Generate html response not result itself
+            generated_html = html_response.generate(api.results[request_id])
+            response.append({"valid" : True, "html": generated_html})
         else: # not done
             response.append({"valid" : False})
     else:

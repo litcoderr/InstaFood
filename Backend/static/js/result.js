@@ -8,7 +8,7 @@ var result = [
     {
         "is_done" : false,
         "have_fetched" : false,
-        "result" : []
+        "html" : ""
     }
 ];
 
@@ -26,6 +26,7 @@ function fetch(){
             result[0]["have_fetched"] = true;
             result[0]["is_done"] = true;
             // ** update result json with data json **
+            result[0]["html"] = data[0]["html"]
         }
     };
     request.send();
@@ -44,6 +45,7 @@ function check_task(){
         clearInterval(iterator);
         if(result[0]["have_fetched"]){ // fetched successfully -> render output
             console.log(result);
+            document.getElementById("response").innerHTML = result[0]["html"]
         }else{ // wasn't successfull -> render error message
             console.log("wasn't successfull");
         }
